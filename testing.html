@@ -7,6 +7,7 @@
 		<link rel="icon" href="logo.png">
 
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 		<link rel="stylesheet" href="theme.css">
 
@@ -17,9 +18,60 @@
 		</style>
 	</head>
 
-	<body>
-		<div class="w3-container w3-theme-d4 w3-teal">
-			<h1>Header</h1>
+	<body style="min-height: 1000px;">
+		
+		<div class="w3-top">
+			<div class="w3-bar w3-theme-d4 w3-card-4" id="navbar">
+				<div class="w3-bar-item w3-button">
+					<img href="#" class="w3-bar-item" src="logo.png" style="height: 25px; padding: 0 0 0 0;" />
+					&nbsp;&nbsp;MTV Klosterneuburg
+				</div>
+				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small">Home</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 1</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 2</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 3</a>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+			</div>
+			
+			
+			<div id="demo" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large w3-hide-medium">
+				<a href="#" class="w3-bar-item w3-button w3-theme">Home</a>
+				<a href="#" class="w3-bar-item w3-button">Link 1</a>
+				<a href="#" class="w3-bar-item w3-button">Link 2</a>
+				<a href="#" class="w3-bar-item w3-button">Link 3</a>
+			</div>
 		</div>
+		
+		
+		<!--
+		<nav class="navbar w3-theme-d4 navbar-inverse navbar-fixed-top w3-card-4">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<img class="navbar-left" src="logo.png" style="height: 50px;">
+					<a class="navbar-brand" href="#">MTV Klosterneuburg</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active w3-hover-theme"><a href="#">Home</a></li>
+					<li><a href="#" class="w3-hover-theme">Page 1</a></li>
+					<li><a href="#" class="w3-hover-theme">Page 2</a></li>
+					<li><a href="#" class="w3-hover-theme">Page 3</a></li>
+				</ul>
+			</div>
+		</nav>
+		-->
+		
+		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 30px;">
+			<p><h1>Header</h1></p>
+		</div>
+		
+		<script>
+		function myFunction() {
+			var x = document.getElementById("demo");
+			if (x.className.indexOf("w3-show") == -1)
+				x.className += " w3-show";
+			else
+				x.className = x.className.replace(" w3-show", "");
+		}
+		</script>
 	</body>
 </html>
