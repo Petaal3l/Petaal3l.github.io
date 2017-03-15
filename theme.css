@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .w3-theme-l5 {color:#000 !important; background-color:#e9f2fe !important}
 .w3-theme-l4 {color:#000 !important; background-color:#b5d3fd !important}
 .w3-theme-l3 {color:#fff !important; background-color:#6ca8fb !important}
@@ -21,6 +22,30 @@
 .w3-hover-theme:hover {color:#fff !important; background-color:#033881 !important}
 .w3-hover-theme-light:hover {color:#000 !important; background-color:#e9f2fe !important}
 .w3-hover-text-theme {color:#033881 !important}
+=======
+.w3-theme-l5 {color:#000 !important; background-color:#e9f2fe !important}
+.w3-theme-l4 {color:#000 !important; background-color:#b5d3fd !important}
+.w3-theme-l3 {color:#fff !important; background-color:#6ca8fb !important}
+.w3-theme-l2 {color:#fff !important; background-color:#227cf9 !important}
+.w3-theme-l1 {color:#fff !important; background-color:#0558cb !important}
+.w3-theme-d1 {color:#fff !important; background-color:#033274 !important}
+.w3-theme-d2 {color:#fff !important; background-color:#032d67 !important}
+.w3-theme-d3 {color:#fff !important; background-color:#02275a !important}
+.w3-theme-d4 {color:#fff !important; background-color:#02214e !important}
+.w3-theme-d5 {color:#fff !important; background-color:#021c41 !important}
+
+.w3-theme-light {color:#000 !important; background-color:#e9f2fe !important}
+.w3-theme-dark {color:#fff !important; background-color:#021c41 !important}
+.w3-theme-action {color:#fff !important; background-color:#021c41 !important}
+
+.w3-theme {color:#fff !important; background-color:#033881 !important}
+.w3-text-theme {color:#033881 !important}
+.w3-border-theme {border-color:#033881 !important}
+
+.w3-hover-theme:hover {color:#fff !important; background-color:#033881 !important}
+.w3-hover-theme-light:hover {color:#000 !important; background-color:#e9f2fe !important}
+.w3-hover-text-theme {color:#033881 !important}
+>>>>>>> origin/master
 =======
 .w3-theme-l5 {color:#000 !important; background-color:#e9f2fe !important}
 .w3-theme-l4 {color:#000 !important; background-color:#b5d3fd !important}
