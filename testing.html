@@ -44,6 +44,24 @@
 					}
 				}
 			}
+			
+			var nrTopics = 9;
+			function nextTopic(id, nextActive) {
+				if (document.getElementById("topic"+id).style.display == "block") {
+					nextActive.style.border = "";
+					document.getElementById("topic"+id).style.display = "none";
+					return;
+				}
+			
+				for (i = 1; i <= nrTopics; i++)
+					document.getElementById("topic"+i).style.display = "none";
+					
+				document.getElementById("topic"+id).style.display = "block";
+				imgs = document.getElementsByClassName("mtv-image-list-img");
+				for (i = 0; i < imgs.length; i++)
+					imgs[i].style.border = "";
+				nextActive.style.border = "3px solid #033881";
+			}
 		</script>
 	</head>
 
@@ -55,15 +73,15 @@
 					<img href="#" class="w3-bar-item" src="logo.png" style="height: 25px; padding: 0 0 0 0;" />
 					&nbsp;&nbsp;MTV Klosterneuburg
 				</div>
-				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small">Willkommen</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 1</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 2</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 3</a>
-				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small w3-hide-medium">Willkommen</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 1</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 2</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 3</a>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="myFunction()">&#9776;</a>
 			</div>
 			
 			
-			<div id="demo" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large w3-hide-medium">
+			<div id="demo" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large">
 				<a href="#" class="w3-bar-item w3-button w3-theme">Willkommen</a>
 				<a href="#" class="w3-bar-item w3-button">Link 1</a>
 				<a href="#" class="w3-bar-item w3-button">Link 2</a>
@@ -105,7 +123,7 @@
 		
 		<div class="w3-container w3-theme-d4 w3-center">
 			<h3>Unser Angebot</h3>
-			<div class="w3-row">
+			<!--<div class="w3-row">
 				<div class="w3-container w3-theme w3-card-4 w3-col m12 l4 s12 mtv-card-300">
 					<header class="w3-container">
 						<h3>Ger&auml;teturnen</h3>
@@ -211,7 +229,75 @@
 				</div>
 			</div>
 			<br>
-			<br>
+			<br>-->
+
+			<div class="w3-cell-row mtv-padding-large mtv-image-list" style="min-height: 100px;">
+				<div class="w3-cell mtv-image-list-cell">
+					<img class="mtv-image-list-img" src="GIFs/turnen.gif" onclick="nextTopic(1, this);">
+				</div>
+				<div class="w3-cell mtv-image-list-cell">
+					<img class="mtv-image-list-img" src="GIFs/gymnastik.gif" onclick="nextTopic(2, this);">
+				</div>
+				<div class="w3-cell mtv-image-list-cell">
+					<img class="mtv-image-list-img" src="GIFs/leichtathletik.gif" onclick="nextTopic(3, this);">
+				</div>
+				<div class="w3-cell mtv-image-list-cell">
+					<img class="mtv-image-list-img" src="GIFs/mutterkindturnen.gif" onclick="nextTopic(4, this);">
+				</div>
+				<div class="w3-cell mtv-image-list-cell">
+					<img class="mtv-image-list-img" src="GIFs/musizieren.gif" onclick="nextTopic(5, this);">
+				</div>
+				<div class="w3-cell mtv-image-list-cell">
+					<img class="mtv-image-list-img" src="GIFs/volkstanzen.gif" onclick="nextTopic(6, this);">
+				</div>
+				<div class="w3-cell mtv-image-list-cell">
+					<img class="mtv-image-list-img" src="GIFs/allgemein.gif" onclick="nextTopic(7, this);">
+				</div>
+				<div class="w3-cell mtv-image-list-cell">
+					<img class="mtv-image-list-img" src="GIFs/turnerlager.gif" onclick="nextTopic(8, this);">
+				</div>
+				<div class="w3-cell mtv-image-list-cell">
+					<img class="mtv-image-list-img" src="GIFs/yoga.gif" onclick="nextTopic(9, this);">
+				</div>
+			</div>
+			<div class="w3-container mtv-padding-large">
+				<div class="w3-container" id="topic1" style="display: none;">
+					<h1>Ger&auml;teturnen</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic2" style="display: none;">
+					<h1>Gymnastik</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic3" style="display: none;">
+					<h1>Leichtathletik</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic4" style="display: none;">
+					<h1>My Page4</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic5" style="display: none;">
+					<h1>My Page5</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic6" style="display: none;">
+					<h1>My Page6</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic7" style="display: none;">
+					<h1>My Page7</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic8" style="display: none;">
+					<h1>My Page8</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic9" style="display: none;">
+					<h1>My Page9</h1>
+					<br><br>
+				</div>
+			</div>
 		</div>
 		
 		<script>
