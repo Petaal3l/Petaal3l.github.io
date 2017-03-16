@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <html>
 	<head>
 		<title>MTV Klosterneuburg</title>
@@ -8,8 +6,8 @@
 
 		<link rel="icon" href="logo.png">
 
-		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 		<link rel="stylesheet" href="theme.css">
 
@@ -17,18 +15,46 @@
 			body {
 			font-family: "Raleway", sans-serif;
 			}
+			p {
+			font-size: 15px;
+			}
 		</style>
+		
+		<script>
+			window.onresize = function() {
+				mtv_extra_padding();
+			}
+			
+			window.onload = function() {
+				mtv_extra_padding();
+			}
+			
+			function mtv_extra_padding() {
+				elems = document.getElementsByClassName("mtv-extra-padding");
+				if (window.innerWidth > 995) {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft += 50;
+						elems[i].style.paddingRight += 50;
+					}
+				} else {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft -= 50;
+						elems[i].style.paddingRight -= 50;
+					}
+				}
+			}
+		</script>
 	</head>
 
 	<body style="min-height: 1000px;">
 		
 		<div class="w3-top">
-			<div class="w3-bar w3-theme-d4 w3-card-4" id="navbar">
+			<div class="w3-bar w3-theme-d4 w3-card-4 mtv-padding-large" id="navbar">
 				<div class="w3-bar-item w3-button">
 					<img href="#" class="w3-bar-item" src="logo.png" style="height: 25px; padding: 0 0 0 0;" />
 					&nbsp;&nbsp;MTV Klosterneuburg
 				</div>
-				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small">Home</a>
+				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small">Willkommen</a>
 				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 1</a>
 				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 2</a>
 				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 3</a>
@@ -37,33 +63,69 @@
 			
 			
 			<div id="demo" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large w3-hide-medium">
-				<a href="#" class="w3-bar-item w3-button w3-theme">Home</a>
+				<a href="#" class="w3-bar-item w3-button w3-theme">Willkommen</a>
 				<a href="#" class="w3-bar-item w3-button">Link 1</a>
 				<a href="#" class="w3-bar-item w3-button">Link 2</a>
 				<a href="#" class="w3-bar-item w3-button">Link 3</a>
 			</div>
 		</div>
 		
+		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 50px;">
+			<p><h1>Willkommen</h1></p>
+		</div>
 		
-		<!--
-		<nav class="navbar w3-theme-d4 navbar-inverse navbar-fixed-top w3-card-4">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<img class="navbar-left" src="logo.png" style="height: 50px;">
-					<a class="navbar-brand" href="#">MTV Klosterneuburg</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li class="active w3-hover-theme"><a href="#">Home</a></li>
-					<li><a href="#" class="w3-hover-theme">Page 1</a></li>
-					<li><a href="#" class="w3-hover-theme">Page 2</a></li>
-					<li><a href="#" class="w3-hover-theme">Page 3</a></li>
-				</ul>
+		<div class="w3-container w3-font-theme-d4 w3-center mtv-padding-large">
+			<h3>Turnen ist mehr!</h3>
+			<p class="mtv-justify">
+				Klar turnen wir auf Geräten (Boden, Barren, Reck, Ringe, Pferd, Trampolin u.v.m), aber das ist längst nicht alles! Neben einem abgerundeten Sportprogramm 
+				für Jung und Alt von Mutter-Vater-Kind-Turnen über Gymnastik (Step-Aerobic, Bauch-Beine-Po) bis zu Herz-Kreislauf-Training bieten wir auch etwas für Geist und Seele: 
+				Volkstanzen und Musizieren (siehe auch Spielmannszug) gehören seit jeher zum Turnen dazu und gemeinsame Feste und Feiern fördern die Geselligkeit!
+			</p>
+		</div>
+		<div class="w3-container w3-font-theme-d4 w3-center mtv-padding-large mtv-margin-large">
+			<h4 class="w3-left" style="margin-bottom: 10px;">Das entspricht unserer Philosophie:</h4>
+			<br><br>
+			<blockquote class="mtv-extra-padding mtv-justify">
+				<p>"Körperliche Erziehung allein verroht, musische Erziehung allein verweichlicht;<br>
+				Nur in der Gemeinsamkeit erhalten wir den gleichmäßig gebildeten Menschen!"</p>
+				<footer>Friedrich Ludwig Jahn</footer>
+			</blockquote>
+		</div>
+		
+		<div class="w3-row w3-center mtv-padding-large mtv-no-padding-small mtv-no-padding-medium" style="opacity: 0.8">
+			<div class="w3-col m4 l4 s12 w3-button mtv-list-start">
+				Aktuelle Turnzeiten
 			</div>
-		</nav>
-		-->
+			<div class="w3-col m4 l4 s12 w3-button">
+				Aktuelle Termine
+			</div>
+			<div class="w3-col m4 l4 s12 w3-button mtv-list-end">
+				Unser Angebot im Detail
+			</div>
+		</div>
 		
-		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 30px;">
-			<p><h1>Header</h1></p>
+		<div class="w3-container w3-theme-d4 w3-center mtv-padding-large">
+			<h3>Unser Angebot</h3>
+			<div class="w3-cell-row">
+				<div class="w3-container w3-card-4 w3-cell w3-mobile">
+					<header class="w3-container">
+						<h3>Ger&auml;teturnen</h3>
+					</header>
+					<hr>
+				</div>
+				<div class="w3-container w3-card-4 w3-cell w3-mobile">
+					<header class="w3-container">
+						<h3>Gymnastik</h3>
+					</header>
+					<hr>
+				</div>
+				<div class="w3-container w3-card-4 w3-cell w3-mobile">
+					<header class="w3-container">
+						<h3>Leichtathletik</h3>
+					</header>
+					<hr>
+				</div>
+			</div>
 		</div>
 		
 		<script>
@@ -76,120 +138,4 @@
 		}
 		</script>
 	</body>
-=======
-<html>
-	<head>
-		<title>MTV Klosterneuburg</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="icon" href="logo.png">
-
-		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-		<link rel="stylesheet" href="theme.css">
-
-		<style>
-			body {
-			font-family: "Raleway", sans-serif;
-			}
-		</style>
-	</head>
-
-	<body style="min-height: 1000px;">
-		<div class="w3-top">
-			<div class="w3-bar w3-theme-d4 w3-card-4" id="navbar">
-				<div class="w3-bar-item w3-button w3-hide-large w3-hide-medium">
-					<img href="#" class="w3-bar-item w3-hide-large w3-hide-medium" src="logo.png" style="height: 25px; padding: 0 0 0 0;" />
-					&nbsp;&nbsp;MTV Klosterneuburg
-				</div>
-				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small">Home</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 1</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 2</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 3</a>
-				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
-			</div>
-			
-			
-			<div id="demo" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large w3-hide-medium">
-				<a href="#" class="w3-bar-item w3-button w3-theme">Home</a>
-				<a href="#" class="w3-bar-item w3-button">Link 1</a>
-				<a href="#" class="w3-bar-item w3-button">Link 2</a>
-				<a href="#" class="w3-bar-item w3-button">Link 3</a>
-			</div>
-		</div>
-		
-		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 30px;">
-			<p><h1>Header</h1></p>
-		</div>
-		
-		<script>
-		function myFunction() {
-			var x = document.getElementById("demo");
-			if (x.className.indexOf("w3-show") == -1)
-				x.className += " w3-show";
-			else
-				x.className = x.className.replace(" w3-show", "");
-		}
-		</script>
-	</body>
->>>>>>> origin/master
-=======
-<html>
-	<head>
-		<title>MTV Klosterneuburg</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="icon" href="logo.png">
-
-		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-		<link rel="stylesheet" href="theme.css">
-
-		<style>
-			body {
-			font-family: "Raleway", sans-serif;
-			}
-		</style>
-	</head>
-
-	<body style="min-height: 1000px;">
-		<div class="w3-top">
-			<div class="w3-bar w3-theme-d4 w3-card-4" id="navbar">
-				<div class="w3-bar-item w3-button w3-hide-large w3-hide-medium">
-					<img href="#" class="w3-bar-item w3-hide-large w3-hide-medium" src="logo.png" style="height: 25px; padding: 0 0 0 0;" />
-					&nbsp;&nbsp;MTV Klosterneuburg
-				</div>
-				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small">Home</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 1</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 2</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small">Link 3</a>
-				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
-			</div>
-			
-			
-			<div id="demo" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large w3-hide-medium">
-				<a href="#" class="w3-bar-item w3-button w3-theme">Home</a>
-				<a href="#" class="w3-bar-item w3-button">Link 1</a>
-				<a href="#" class="w3-bar-item w3-button">Link 2</a>
-				<a href="#" class="w3-bar-item w3-button">Link 3</a>
-			</div>
-		</div>
-		
-		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 30px;">
-			<p><h1>Header</h1></p>
-		</div>
-		
-		<script>
-		function myFunction() {
-			var x = document.getElementById("demo");
-			if (x.className.indexOf("w3-show") == -1)
-				x.className += " w3-show";
-			else
-				x.className = x.className.replace(" w3-show", "");
-		}
-		</script>
-	</body>
->>>>>>> origin/master
 </html>
