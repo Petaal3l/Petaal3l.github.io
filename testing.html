@@ -22,24 +22,32 @@
 		
 		<script>
 			window.onresize = function() {
-				elem = document.getElementById("navbar");
+				elems = document.getElementsByClassName("mtv-padding-large");
 				if (window.innerWidth > 995) {
-					elem.style.paddingLeft = 100;
-					elem.style.paddingRight = 100;
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft = 100;
+						elems[i].style.paddingRight = 100;
+					}
 				} else {
-					elem.style.paddingLeft = 0;
-					elem.style.paddingRight = 0;
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft = 0;
+						elems[i].style.paddingRight = 0;
+					}
 				}
 			}
 			
 			window.onload = function() {
-				elem = document.getElementById("navbar");
+				elems = document.getElementsByClassName("mtv-padding-large");
 				if (window.innerWidth > 995) {
-					elem.style.paddingLeft = 100;
-					elem.style.paddingRight = 100;
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft = 100;
+						elems[i].style.paddingRight = 100;
+					}
 				} else {
-					elem.style.paddingLeft = 0;
-					elem.style.paddingRight = 0;
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft = 0;
+						elems[i].style.paddingRight = 0;
+					}
 				}
 			}
 		</script>
@@ -48,7 +56,7 @@
 	<body style="min-height: 1000px;">
 		
 		<div class="w3-top">
-			<div class="w3-bar w3-theme-d4 w3-card-4" id="navbar">
+			<div class="w3-bar w3-theme-d4 w3-card-4 mtv-padding-large" id="navbar">
 				<div class="w3-bar-item w3-button">
 					<img href="#" class="w3-bar-item" src="logo.png" style="height: 25px; padding: 0 0 0 0;" />
 					&nbsp;&nbsp;MTV Klosterneuburg
@@ -93,6 +101,11 @@
 		
 		<div class="w3-container w3-font-theme-d4 w3-center">
 			<h3 style="color: #000; font-weight: bold;">Turnen ist mehr!</h3>
+			<p class="mtv-padding-large">
+				Klar turnen wir auf Geräten (Boden, Barren, Reck, Ringe, Pferd, Trampolin u.v.m), aber das ist längst nicht alles! Neben einem abgerundeten Sportprogramm 
+				für Jung und Alt von Mutter-Vater-Kind-Turnen über Gymnastik (Step-Aerobic, Bauch-Beine-Po) bis zu Herz-Kreislauf-Training bieten wir auch etwas für Geist und Seele: 
+				Volkstanzen und Musizieren (siehe auch Spielmannszug) gehören seit jeher zum Turnen dazu und gemeinsame Feste und Feiern fördern die Geselligkeit!
+			</p>
 		</div>
 		
 		<script>
