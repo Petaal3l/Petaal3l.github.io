@@ -44,6 +44,18 @@
 					}
 				}
 			}
+			
+			var nrTopics = 9;
+			function nextTopic(id, nextActive) {
+				for (i = 1; i <= nrTopics; i++)
+					document.getElementById("topic"+i).style.display = "none";
+					
+				document.getElementById("topic"+id).style.display = "block";
+				imgs = document.getElementsByClassName("mtv-image-list-img");
+				for (i = 0; i < imgs.length; i++)
+					imgs[i].style.opacity = "1.0";
+				nextActive.style.opacity = "0.8";
+			}
 		</script>
 	</head>
 
@@ -105,7 +117,7 @@
 		
 		<div class="w3-container w3-theme-d4 w3-center">
 			<h3>Unser Angebot</h3>
-			<div class="w3-row">
+			<!--<div class="w3-row">
 				<div class="w3-container w3-theme w3-card-4 w3-col m12 l4 s12 mtv-card-300">
 					<header class="w3-container">
 						<h3>Ger&auml;teturnen</h3>
@@ -211,7 +223,75 @@
 				</div>
 			</div>
 			<br>
-			<br>
+			<br>-->
+
+			<div class="w3-cell-row mtv-padding-large mtv-image-list">
+				<div class="w3-cell">
+					<img class="active mtv-image-list-img" src="GIFs/turnen.gif" onclick="nextTopic(1, this);">
+				</div>
+				<div class="w3-cell">
+					<img class="mtv-image-list-img" src="GIFs/gymnastik.gif" onclick="nextTopic(2, this);">
+				</div>
+				<div class="w3-cell">
+					<img class="mtv-image-list-img" src="GIFs/leichtathletik.gif" onclick="nextTopic(3, this);">
+				</div>
+				<div class="w3-cell">
+					<img class="mtv-image-list-img" src="GIFs/mutterkindturnen.gif" onclick="nextTopic(4, this);">
+				</div>
+				<div class="w3-cell">
+					<img class="mtv-image-list-img" src="GIFs/musizieren.gif" onclick="nextTopic(5, this);">
+				</div>
+				<div class="w3-cell">
+					<img class="mtv-image-list-img" src="GIFs/volkstanzen.gif" onclick="nextTopic(6, this);">
+				</div>
+				<div class="w3-cell">
+					<img class="mtv-image-list-img" src="GIFs/allgemein.gif" onclick="nextTopic(7, this);">
+				</div>
+				<div class="w3-cell">
+					<img class="mtv-image-list-img" src="GIFs/turnerlager.gif" onclick="nextTopic(8, this);">
+				</div>
+				<div class="w3-cell">
+					<img class="mtv-image-list-img" src="GIFs/yoga.gif" onclick="nextTopic(9, this);">
+				</div>
+			</div>
+			<div class="w3-container mtv-padding-large">
+				<div class="w3-container" id="topic1" style="display: block;">
+					<h1>My Page1</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic2" style="display: none;">
+					<h1>My Page2</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic3" style="display: none;">
+					<h1>My Page3</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic4" style="display: none;">
+					<h1>My Page4</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic5" style="display: none;">
+					<h1>My Page5</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic6" style="display: none;">
+					<h1>My Page6</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic7" style="display: none;">
+					<h1>My Page7</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic8" style="display: none;">
+					<h1>My Page8</h1>
+					<br><br>
+				</div>
+				<div class="w3-container" id="topic9" style="display: none;">
+					<h1>My Page9</h1>
+					<br><br>
+				</div>
+			</div>
 		</div>
 		
 		<script>
