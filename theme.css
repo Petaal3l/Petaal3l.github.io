@@ -41,6 +41,8 @@
 .w3-bar-item{height: 50px !important; padding-top: 15px !important}
 .w3-bar-item img {padding-top: 0px !important; height: 40px !important; position: relative; top: -8px;}
 
+.mtv-table img {padding-top: 0px !important; height: 70px; margin-right: 10px;}
+
 @media screen and (min-width: 995px) {
 	.mtv-padding-large{padding-left: 150px; padding-right: 150px !important}
 	.mtv-maring-large{margin-left: 50; margin-right: 50 !important}
