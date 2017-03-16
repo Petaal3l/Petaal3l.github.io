@@ -34,5 +34,13 @@
 .w3-font-theme-d5 {color:#021c41 !important; background-color:#fff !important}
 
 .w3-font-theme-d4 h3 {color: #000 !important; font-weight: bold !important}
+.w3-font-theme-d4 h4 {color: #000 !important; font-weight: bold !important}
+
+.w3-bar{height: 50px !important}
+.w3-bar-item{height: 50px !important; padding-top: 15px !important}
+.w3-bar-item img {padding-top: 0px !important; height: 40px !important; position: relative; top: -8px;}
+
+.border-top-left {border-top-left-radius: 10px!important}
+.border-top-right {border-top-right-radius: 10px!important}
 
 .mtv-justify {text-align: justify !important}
