@@ -6,8 +6,8 @@
 
 		<link rel="icon" href="logo.png">
 
-		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 		<link rel="stylesheet" href="theme.css">
 
@@ -22,31 +22,58 @@
 		
 		<script>
 			window.onresize = function() {
+				mtv_padding_large();
+				mtv_extra_padding();
+				mtv_margin_large();
+			}
+			
+			window.onload = function() {
+				mtv_padding_large();
+				mtv_extra_padding();
+				mtv_margin_large();
+			}
+			
+			function mtv_padding_large() {
 				elems = document.getElementsByClassName("mtv-padding-large");
 				if (window.innerWidth > 995) {
 					for (i = 0; i < elems.length; i++) {
-						elems[i].style.paddingLeft = 100;
-						elems[i].style.paddingRight = 100;
+						elems[i].style.paddingLeft = 150;
+						elems[i].style.paddingRight = 150;
 					}
 				} else {
 					for (i = 0; i < elems.length; i++) {
-						elems[i].style.paddingLeft = 0;
-						elems[i].style.paddingRight = 0;
+						elems[i].style.paddingLeft = 20;
+						elems[i].style.paddingRight = 20;
 					}
 				}
 			}
 			
-			window.onload = function() {
-				elems = document.getElementsByClassName("mtv-padding-large");
+			function mtv_extra_padding() {
+				elems = document.getElementsByClassName("mtv-extra-padding");
 				if (window.innerWidth > 995) {
 					for (i = 0; i < elems.length; i++) {
-						elems[i].style.paddingLeft = 100;
-						elems[i].style.paddingRight = 100;
+						elems[i].style.paddingLeft += 50;
+						elems[i].style.paddingRight += 50;
 					}
 				} else {
 					for (i = 0; i < elems.length; i++) {
-						elems[i].style.paddingLeft = 0;
-						elems[i].style.paddingRight = 0;
+						elems[i].style.paddingLeft -= 50;
+						elems[i].style.paddingRight -= 50;
+					}
+				}
+			}
+			
+			function mtv_margin_large() {
+				elems = document.getElementsByClassName("mtv-margin-large");
+				if (window.innerWidth > 995) {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.marginLeft = 50;
+						elems[i].style.marginRight = 50;
+					}
+				} else {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.marginLeft = 20;
+						elems[i].style.marginRight = 20;
 					}
 				}
 			}
@@ -99,13 +126,22 @@
 			<p><h1>Willkommen</h1></p>
 		</div>
 		
-		<div class="w3-container w3-font-theme-d4 w3-center">
-			<h3 style="color: #000; font-weight: bold;">Turnen ist mehr!</h3>
-			<p class="mtv-padding-large">
+		<div class="w3-container w3-font-theme-d4 w3-center mtv-padding-large">
+			<h3>Turnen ist mehr!</h3>
+			<p class="mtv-justify">
 				Klar turnen wir auf Geräten (Boden, Barren, Reck, Ringe, Pferd, Trampolin u.v.m), aber das ist längst nicht alles! Neben einem abgerundeten Sportprogramm 
 				für Jung und Alt von Mutter-Vater-Kind-Turnen über Gymnastik (Step-Aerobic, Bauch-Beine-Po) bis zu Herz-Kreislauf-Training bieten wir auch etwas für Geist und Seele: 
 				Volkstanzen und Musizieren (siehe auch Spielmannszug) gehören seit jeher zum Turnen dazu und gemeinsame Feste und Feiern fördern die Geselligkeit!
 			</p>
+		</div>
+		<div class="w3-container w3-font-theme-d4 w3-center mtv-padding-large mtv-margin-large">
+			<h4 class="w3-left" style="color: #000; font-weight: bold;">Das entspricht unserer Philosophie:</h4>
+			<br><br>
+			<blockquote class="mtv-extra-padding mtv-justify">
+				<p>"Körperliche Erziehung allein verroht, musische Erziehung allein verweichlicht;<br>
+				Nur in der Gemeinsamkeit erhalten wir den gleichmäßig gebildeten Menschen!"</p>
+				<footer>Friedrich Ludwig Jahn</footer>
+			</blockquote>
 		</div>
 		
 		<script>
