@@ -40,6 +40,7 @@
 .w3-bar-item{height: 50px !important; padding-top: 15px !important}
 .w3-bar-item img {padding-top: 0px !important; height: 40px !important; position: relative; top: -8px;}
 
+<<<<<<< HEAD
 @media screen and (min-width: 995px) {
 	.mtv-padding-large{padding-left: 150px; padding-right: 150px !important}
 	.mtv-maring-large{margin-left: 50; margin-right: 50 !important}
@@ -62,4 +63,9 @@
 }
 
 .mtv-border-bottom{border-radius: 0px 0px 10px 10px}
+=======
+.border-top-left {border-top-left-radius: 10px!important}
+.border-top-right {border-top-right-radius: 10px!important}
+
+>>>>>>> origin/master
 .mtv-justify {text-align: justify !important}

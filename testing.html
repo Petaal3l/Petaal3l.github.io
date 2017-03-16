@@ -22,11 +22,38 @@
 		
 		<script>
 			window.onresize = function() {
+<<<<<<< HEAD
 				mtv_extra_padding();
 			}
 			
 			window.onload = function() {
 				mtv_extra_padding();
+=======
+				mtv_padding_large();
+				mtv_extra_padding();
+				mtv_margin_large();
+			}
+			
+			window.onload = function() {
+				mtv_padding_large();
+				mtv_extra_padding();
+				mtv_margin_large();
+			}
+			
+			function mtv_padding_large() {
+				elems = document.getElementsByClassName("mtv-padding-large");
+				if (window.innerWidth > 995) {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft = 150;
+						elems[i].style.paddingRight = 150;
+					}
+				} else {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft = 20;
+						elems[i].style.paddingRight = 20;
+					}
+				}
+>>>>>>> origin/master
 			}
 			
 			function mtv_extra_padding() {
@@ -43,6 +70,24 @@
 					}
 				}
 			}
+<<<<<<< HEAD
+=======
+			
+			function mtv_margin_large() {
+				elems = document.getElementsByClassName("mtv-margin-large");
+				if (window.innerWidth > 995) {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.marginLeft = 50;
+						elems[i].style.marginRight = 50;
+					}
+				} else {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.marginLeft = 20;
+						elems[i].style.marginRight = 20;
+					}
+				}
+			}
+>>>>>>> origin/master
 		</script>
 	</head>
 
@@ -70,6 +115,27 @@
 			</div>
 		</div>
 		
+<<<<<<< HEAD
+=======
+		
+		<!--
+		<nav class="navbar w3-theme-d4 navbar-inverse navbar-fixed-top w3-card-4">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<img class="navbar-left" src="logo.png" style="height: 50px;">
+					<a class="navbar-brand" href="#">MTV Klosterneuburg</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active w3-hover-theme"><a href="#">Home</a></li>
+					<li><a href="#" class="w3-hover-theme">Page 1</a></li>
+					<li><a href="#" class="w3-hover-theme">Page 2</a></li>
+					<li><a href="#" class="w3-hover-theme">Page 3</a></li>
+				</ul>
+			</div>
+		</nav>
+		-->
+		
+>>>>>>> origin/master
 		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 50px;">
 			<p><h1>Willkommen</h1></p>
 		</div>
@@ -83,7 +149,11 @@
 			</p>
 		</div>
 		<div class="w3-container w3-font-theme-d4 w3-center mtv-padding-large mtv-margin-large">
+<<<<<<< HEAD
 			<h4 class="w3-left" style="margin-bottom: 10px;">Das entspricht unserer Philosophie:</h4>
+=======
+			<h4 class="w3-left">Das entspricht unserer Philosophie:</h4>
+>>>>>>> origin/master
 			<br><br>
 			<blockquote class="mtv-extra-padding mtv-justify">
 				<p>"Körperliche Erziehung allein verroht, musische Erziehung allein verweichlicht;<br>
@@ -92,20 +162,30 @@
 			</blockquote>
 		</div>
 		
+<<<<<<< HEAD
 		<div class="w3-row w3-center mtv-padding-large mtv-no-padding-small mtv-no-padding-medium" style="opacity: 0.8">
 			<div class="w3-col m4 l4 s12 w3-button mtv-list-start">
+=======
+		<div class="w3-row w3-center mtv-padding-large" style="opacity: 0.8">
+			<div class="w3-col m4 l4 s12 w3-button border-top-left">
+>>>>>>> origin/master
 				Aktuelle Turnzeiten
 			</div>
 			<div class="w3-col m4 l4 s12 w3-button">
 				Aktuelle Termine
 			</div>
+<<<<<<< HEAD
 			<div class="w3-col m4 l4 s12 w3-button mtv-list-end">
+=======
+			<div class="w3-col m4 l4 s12 w3-button border-top-right">
+>>>>>>> origin/master
 				Unser Angebot im Detail
 			</div>
 		</div>
 		
 		<div class="w3-container w3-theme-d4 w3-center mtv-padding-large">
 			<h3>Unser Angebot</h3>
+<<<<<<< HEAD
 			<div class="w3-cell-row">
 				<div class="w3-container w3-card-4 w3-cell w3-mobile">
 					<header class="w3-container">
@@ -126,6 +206,8 @@
 					<hr>
 				</div>
 			</div>
+=======
+>>>>>>> origin/master
 		</div>
 		
 		<script>
