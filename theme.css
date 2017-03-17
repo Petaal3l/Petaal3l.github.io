@@ -1,4 +1,15 @@
-<!DOCTYPE css>
+.mtv-footer a:hover {
+	color: #02275a;
+	text-decoration: none;
+}
+
+.mtv-footer a {
+	color: #0558cb;
+}
+
+
+
+.w3-button-theme {color: #000 !important; background-color: #ccc !important}
 .w3-theme-l5 {color:#000 !important; background-color:#e9f2fe !important}
 .w3-theme-l4 {color:#000 !important; background-color:#b5d3fd !important}
 .w3-theme-l3 {color:#fff !important; background-color:#6ca8fb !important}
@@ -100,6 +111,8 @@
 
 .mtv-justify {text-align: justify !important}
 .mtv-kursiv {font-style: italic !important}
+
+.mtv-footer {margin-top: 100px !important}
 
 .mtv-animate-fadein{position:relative;-webkit-animation:mtv_fadein 0.6s;animation:mtv_fadein 0.6s}
 @-webkit-keyframes mtv_fadein{from{opacity:0} to{opacity:1}}

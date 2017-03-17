@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MTV Klosterneuburg</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" href="logo.png">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="theme.css">
+
+		<style>
+			body {
+			font-family: "Raleway", sans-serif;
+			}
+			p {
+			font-size: 15px;
+			}
+		</style>
+		
+		<script>
+			window.onresize = function() {
+				mtv_extra_padding();
+			}
+			
+			window.onload = function() {
+				mtv_extra_padding();
+			}
+			
+			function mtv_extra_padding() {
+				elems = document.getElementsByClassName("mtv-extra-padding");
+				if (window.innerWidth > 995) {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft += 50;
+						elems[i].style.paddingRight += 50;
+					}
+				} else {
+					for (i = 0; i < elems.length; i++) {
+						elems[i].style.paddingLeft -= 50;
+						elems[i].style.paddingRight -= 50;
+					}
+				}
+			}
+			
+			var nrTopics = 9;
+			function nextTopic(id, nextActive) {
+				/*if (document.getElementById("topic"+id).style.display == "block") {
+					nextActive.style.border = "";
+					document.getElementById("topic"+id).style.display = "none";
+					return;
+				}*/
+			
+				for (i = 1; i <= nrTopics; i++)
+					document.getElementById("topic"+i).style.display = "none";
+					
+				document.getElementById("topic"+id).style.display = "block";
+				imgs = document.getElementsByClassName("mtv-image-list-img");
+				for (i = 0; i < imgs.length; i++)
+					imgs[i].className = imgs[i].className.replace(" active", "");
+				nextActive.className += " active";
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="w3-top">
+			<div class="w3-bar w3-theme-d4 w3-card-4 mtv-padding-large" id="navbar">
+				<div class="w3-bar-item w3-button">
+					<img href="#" class="w3-bar-item" src="logo.png" style="height: 25px; padding: 0 0 0 0;" />
+					&nbsp;&nbsp;MTV Klosterneuburg
+				</div>
+				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small w3-hide-medium">Willkommen</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 1</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 2</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 3</a>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="myFunction()">&#9776;</a>
+			</div>
+			
+			
+			<div id="demo" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large">
+				<a href="#" class="w3-bar-item w3-button w3-theme">Willkommen</a>
+				<a href="#" class="w3-bar-item w3-button">Link 1</a>
+				<a href="#" class="w3-bar-item w3-button">Link 2</a>
+				<a href="#" class="w3-bar-item w3-button">Link 3</a>
+			</div>
+		</div>
+		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 50px;">
+			<p><h1>Infos</h1></p>
+		</div>
+		
+	</body>
+</html>
