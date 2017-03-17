@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="theme.css">
 
 		<style>
@@ -88,18 +89,26 @@
 				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Vereinsnachrichten</a>
 				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium">Links</a>
 				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium">Kontakt</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium"><i class="fa fa-sign-in"></i></a>
 				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="myFunction()">&#9776;</a>
 			</div>
 			
 			
-			<div id="demo" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large">
-				<a href="#" class="w3-bar-item w3-button w3-theme">Willkommen</a>
-				<a href="#" class="w3-bar-item w3-button">Infos</a>
-				<a href="#" class="w3-bar-item w3-button">Termine</a>
-				<a href="#" class="w3-bar-item w3-button">Fotogalerie</a>
-				<a href="#" class="w3-bar-item w3-button">Vereinsnachrichten</a>
-				<a href="#" class="w3-bar-item w3-button">Links</a>
-				<a href="#" class="w3-bar-item w3-button">Kontakt</a>
+			<div id="navbarCollapsed" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large">
+				<div class="w3-bar-item w3-cell-row w3-theme-d4" style="padding: 0px !important; margin: 0px !important;">
+					<a href="#" class="w3-third w3-button w3-theme">Willkommen</a>
+					<a href="#" class="w3-third w3-button w3-theme-d4">Infos</a>
+					<a href="#" class="w3-third w3-button w3-theme-d4">Termine</a>
+				</div>
+				<div class="w3-bar-item w3-cell-row w3-theme-d4" style="padding: 0px !important; margin: 0px !important;">
+					<a href="#" class="w3-half w3-button w3-theme-d4">Fotogalerie</a>
+					<a href="#" class="w3-half w3-button w3-theme-d4">Vereinsnachrichten</a>
+				</div>
+				<div class="w3-bar-item w3-cell-row w3-theme-d4" style="padding: 0px !important;">
+					<a href="#" class="w3-third w3-button w3-theme-d4">Links</a>
+					<a href="#" class="w3-third w3-button w3-theme-d4">Kontakt</a>
+					<a href="#" class="w3-third w3-button w3-theme-d4">Login</a>
+				</div>
 			</div>
 		</div>
 		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 50px;">
@@ -300,7 +309,7 @@
 		
 		<script>
 		function myFunction() {
-			var x = document.getElementById("demo");
+			var x = document.getElementById("navbarCollapsed");
 			if (x.className.indexOf("w3-show") == -1)
 				x.className += " w3-show";
 			else
