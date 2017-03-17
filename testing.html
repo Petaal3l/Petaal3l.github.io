@@ -52,16 +52,6 @@
 					document.getElementById("topic"+id).style.display = "none";
 					return;
 				}
-<<<<<<< HEAD
-			}
-			
-			var nrTopics = 9;
-			function nextTopic(id, nextActive) {
-				if (document.getElementById("topic"+id).style.display == "block") {
-					nextActive.style.border = "";
-					document.getElementById("topic"+id).style.display = "none";
-					return;
-				}
 			
 				for (i = 1; i <= nrTopics; i++)
 					document.getElementById("topic"+i).style.display = "none";
@@ -138,84 +128,6 @@
 					<header class="w3-container">
 						<h3>Ger&auml;teturnen</h3>
 					</header>
-=======
-			
-				for (i = 1; i <= nrTopics; i++)
-					document.getElementById("topic"+i).style.display = "none";
-					
-				document.getElementById("topic"+id).style.display = "block";
-				imgs = document.getElementsByClassName("mtv-image-list-img");
-				for (i = 0; i < imgs.length; i++)
-					imgs[i].style.border = "";
-				nextActive.style.border = "3px solid #033881";
-			}
-		</script>
-	</head>
-
-	<body style="min-height: 1000px;">
-		
-		<div class="w3-top">
-			<div class="w3-bar w3-theme-d4 w3-card-4 mtv-padding-large" id="navbar">
-				<div class="w3-bar-item w3-button">
-					<img href="#" class="w3-bar-item" src="logo.png" style="height: 25px; padding: 0 0 0 0;" />
-					&nbsp;&nbsp;MTV Klosterneuburg
-				</div>
-				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small w3-hide-medium">Willkommen</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 1</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 2</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Link 3</a>
-				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="myFunction()">&#9776;</a>
-			</div>
-			
-			
-			<div id="demo" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large">
-				<a href="#" class="w3-bar-item w3-button w3-theme">Willkommen</a>
-				<a href="#" class="w3-bar-item w3-button">Link 1</a>
-				<a href="#" class="w3-bar-item w3-button">Link 2</a>
-				<a href="#" class="w3-bar-item w3-button">Link 3</a>
-			</div>
-		</div>
-		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 50px;">
-			<p><h1>Willkommen</h1></p>
-		</div>
-		
-		<div class="w3-container w3-font-theme-d4 w3-center mtv-padding-large">
-			<h3>Turnen ist mehr!</h3>
-			<p class="mtv-justify">
-				Klar turnen wir auf Geräten (Boden, Barren, Reck, Ringe, Pferd, Trampolin u.v.m), aber das ist längst nicht alles! Neben einem abgerundeten Sportprogramm 
-				für Jung und Alt von Mutter-Vater-Kind-Turnen über Gymnastik (Step-Aerobic, Bauch-Beine-Po) bis zu Herz-Kreislauf-Training bieten wir auch etwas für Geist und Seele: 
-				Volkstanzen und Musizieren (siehe auch Spielmannszug) gehören seit jeher zum Turnen dazu und gemeinsame Feste und Feiern fördern die Geselligkeit!
-			</p>
-		</div>
-		<div class="w3-container w3-font-theme-d4 w3-center mtv-padding-large mtv-margin-large">
-			<h4 class="w3-left" style="">Das entspricht unserer Philosophie:</h4>
-			<br><br>
-			<blockquote class="mtv-extra-padding mtv-justify" style="padding-top: -10px;">
-				<p>"Körperliche Erziehung allein verroht, musische Erziehung allein verweichlicht;<br>
-				Nur in der Gemeinsamkeit erhalten wir den gleichmäßig gebildeten Menschen!"</p>
-				<footer>Friedrich Ludwig Jahn</footer>
-			</blockquote>
-		</div>
-		<div class="w3-row w3-center mtv-padding-large mtv-no-padding-small mtv-no-padding-medium" style="opacity: 0.8">
-			<div class="w3-col m4 l4 s12 w3-button mtv-list-start">
-				Aktuelle Turnzeiten
-			</div>
-			<div class="w3-col m4 l4 s12 w3-button">
-				Aktuelle Termine
-			</div>
-			<div class="w3-col m4 l4 s12 w3-button mtv-list-end">
-				Unser Angebot im Detail
-			</div>
-		</div>
-		
-		<div class="w3-container w3-theme-d4 w3-center">
-			<h3>Unser Angebot</h3>
-			<!--<div class="w3-row">
-				<div class="w3-container w3-theme w3-card-4 w3-col m12 l4 s12 mtv-card-300">
-					<header class="w3-container">
-						<h3>Ger&auml;teturnen</h3>
-					</header>
->>>>>>> origin/master
 					<hr>
 					<div class="w3-container mtv-table">
 						<img src="GIFs/turnen.gif" alt="Turner auf Barren" class="w3-left w3-circle">
@@ -319,11 +231,7 @@
 			<br>
 			<br>-->
 
-<<<<<<< HEAD
 			<div class="w3-cell-row mtv-padding-large mtv-image-list" style="min-height: 100px; overflow: auto;">
-=======
-			<div class="w3-cell-row mtv-padding-large mtv-image-list" style="min-height: 100px;">
->>>>>>> origin/master
 				<div class="w3-cell mtv-image-list-cell">
 					<img class="mtv-image-list-img" src="GIFs/turnen.gif" onclick="nextTopic(1, this);">
 				</div>
@@ -389,7 +297,6 @@
 					<h1>My Page9</h1>
 					<br><br>
 				</div>
-<<<<<<< HEAD
 			</div>
 		</div>
 		
@@ -403,19 +310,4 @@
 		}
 		</script>
 	</body>
-=======
-			</div>
-		</div>
-		
-		<script>
-		function myFunction() {
-			var x = document.getElementById("demo");
-			if (x.className.indexOf("w3-show") == -1)
-				x.className += " w3-show";
-			else
-				x.className = x.className.replace(" w3-show", "");
-		}
-		</script>
-	</body>
->>>>>>> origin/master
 </html>
