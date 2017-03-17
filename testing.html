@@ -47,11 +47,11 @@
 			
 			var nrTopics = 9;
 			function nextTopic(id, nextActive) {
-				if (document.getElementById("topic"+id).style.display == "block") {
+				/*if (document.getElementById("topic"+id).style.display == "block") {
 					nextActive.style.border = "";
 					document.getElementById("topic"+id).style.display = "none";
 					return;
-				}
+				}*/
 			
 				for (i = 1; i <= nrTopics; i++)
 					document.getElementById("topic"+i).style.display = "none";
@@ -59,8 +59,8 @@
 				document.getElementById("topic"+id).style.display = "block";
 				imgs = document.getElementsByClassName("mtv-image-list-img");
 				for (i = 0; i < imgs.length; i++)
-					imgs[i].style.border = "";
-				nextActive.style.border = "3px solid #033881";
+					imgs[i].className = imgs[i].className.replace(" active", "");
+				nextActive.className += " active";
 			}
 		</script>
 	</head>
@@ -121,196 +121,155 @@
 			</div>
 		</div>
 		
-		<div class="w3-container w3-theme-d4 w3-center">
+		<div class="w3-container w3-theme-d4 w3-center mtv-image-list-container-425-large mtv-image-list-container-530-small">
 			<h3>Unser Angebot</h3>
-			<!--<div class="w3-row">
-				<div class="w3-container w3-theme w3-card-4 w3-col m12 l4 s12 mtv-card-300">
-					<header class="w3-container">
-						<h3>Ger&auml;teturnen</h3>
-					</header>
-					<hr>
-					<div class="w3-container mtv-table">
-						<img src="GIFs/turnen.gif" alt="Turner auf Barren" class="w3-left w3-circle">
-						<p style="text-align: left;">
-							Gefragt sind Beweglichkeit, Kraft und Können.
-						</p>
+			<div class="mtv-padding-large mtv-image-list" style="overflow-x: scroll;">
+				<div class="w3-cell-row">
+					<div class="mtv-image-list-cell w3-cell">
+						<img class="mtv-image-list-img active" src="GIFs/turnen.gif" onclick="nextTopic(1, this);">
 					</div>
-					<hr>
-					<p class="mtv-justify">
-						Wir legen Wert auf gesundes Training. Im Gegensatz zu reinem Bodybuilding wird hier nicht nur Kraft, 
-						sondern auch Beweglichkeit und Körperbeherrschung trainiert. Das verhindert Haltungsschäden, vor allem bei Kindern. 
-					</p>
-				</div>
-				<div class="w3-container w3-theme-d5 w3-card-4 w3-col m12 l4 s12 mtv-card-300">
-					<header class="w3-container">
-						<h3>Gymnastik</h3>
-					</header>
-					<hr>
-					<div class="w3-container mtv-table">
-						<img src="GIFs/gymnastik.gif" alt="Dehnender Mensch" class="w3-left w3-circle">
-						<p style="text-align: left;">
-							Schweißtreibend, rhythmusbetont, figurformend. Was das bringt? Fitness!!  
-						</p>
+					<div class="mtv-image-list-cell w3-cell">
+						<img class="mtv-image-list-img" src="GIFs/gymnastik.gif" onclick="nextTopic(2, this);">
 					</div>
-					<hr>
-					<p class="mtv-justify">
-						Nicht nur für Damen ist unser Angebot an Gymnastik-Programmen. Wer seine Kondition verbessern oder ein paar Kilo abspecken will, 
-						oder wer einfach nur Spaß an der Bewegung zu Musik hat, ist hier richtig.  
-					</p>
-				</div>
-				<div class="w3-container w3-theme w3-card-4 w3-col m12 l4 s12 mtv-card-300">
-					<header class="w3-container mtv-table">
-						<h3>Leichtathletik</h3>
-					</header>
-					<hr>
-					<div class="w3-container mtv-table">
-						<img src="GIFs/leichtathletik.gif" alt="Mensch im Sprint" class="w3-left w3-circle">
-						<p style="text-align: left;">
-							Hier werden Schnelligkeit, Ausdauer, Kraft und die richtige Umsetzung trainiert.  
-						</p>
+					<div class="mtv-image-list-cell w3-cell">
+						<img class="mtv-image-list-img" src="GIFs/leichtathletik.gif" onclick="nextTopic(3, this);">
 					</div>
-					<hr>
-					<p class="mtv-justify">
-						Schneller, höher, weiter! Doch auch hier steht uns körpergerechtes Training vor Spitzenleistungen. 
-						Die Bewegung im Freien ist gesund und natürlich vor allem im Sommer sehr beliebt.  
-					</p>
+					<div class="mtv-image-list-cell w3-cell">
+						<img class="mtv-image-list-img" src="GIFs/mutterkindturnen.gif" onclick="nextTopic(4, this);">
+					</div>
+					<div class="mtv-image-list-cell w3-cell">
+						<img class="mtv-image-list-img" src="GIFs/musizieren.gif" onclick="nextTopic(5, this);">
+					</div>
+					<div class="mtv-image-list-cell w3-cell">
+						<img class="mtv-image-list-img" src="GIFs/volkstanzen.gif" onclick="nextTopic(6, this);">
+					</div>
+					<div class="mtv-image-list-cell w3-cell">
+						<img class="mtv-image-list-img" src="GIFs/allgemein.gif" onclick="nextTopic(7, this);">
+					</div>
+					<div class="mtv-image-list-cell w3-cell">
+						<img class="mtv-image-list-img" src="GIFs/turnerlager.gif" onclick="nextTopic(8, this);">
+					</div>
+					<div class="mtv-image-list-cell w3-cell">
+						<img class="mtv-image-list-img" src="GIFs/yoga.gif" onclick="nextTopic(9, this);">
+					</div>
 				</div>
 			</div>
-			
-			<div class="w3-row">
-				<div class="w3-container w3-theme-d5 w3-card-4 w3-col m12 l4 s12 mtv-card-300">
-					<header class="w3-container">
-						<h3>Mutter-Vater-Kind-Turnen</h3>
-					</header>
-					<hr>
-					<div class="w3-container mtv-table">
-						<img src="GIFs/mutterkindturnen.gif" alt="Turner auf Barren" class="w3-left w3-circle">
-						<p style="text-align: left;">
-							Schon die Kleinsten bewegen sich gerne mit ihren Eltern.
-						</p>
-					</div>
-					<hr>
-					<p class="mtv-justify">
-						Spielerisch erlernen die Kinder gemeinsam mit ihren Eltern die Grundbegriffe für das Bewegen in einem Turnsaal kennen. 
-						Es wird nicht nur die Beweglichkeit und Kraft sondern auch die Koordination sowie das Vertrauen in die Eltern geschult.  
-					</p>
-				</div>
-				<div class="w3-container w3-theme w3-card-4 w3-col m12 l4 s12 mtv-card-300">
-					<header class="w3-container">
-						<h3>Musizieren</h3>
-					</header>
-					<hr>
-					<div class="w3-container mtv-table">
-						<img src="GIFs/musizieren.gif" alt="Dehnender Mensch" class="w3-left w3-circle">
-						<p style="text-align: left;">
-							In unserem Spielmannszug wird auch der Geist trainiert.
-						</p>
-					</div>
-					<hr>
-					<p class="mtv-justify">
-						Ein buntes Repertoire aus verschiedenen Musikrichtungen schult Ausdauer, Konzentration und sorgt für gemeinsame Erfolgserlebnisse.
-					</p>
-				</div>
-				<div class="w3-container w3-theme-d5 w3-card-4 w3-col m12 l4 s12 mtv-card-300">
-					<header class="w3-container mtv-table">
-						<h3>Volkstanzen</h3>
-					</header>
-					<hr>
-					<div class="w3-container mtv-table">
-						<img src="GIFs/volkstanzen.gif" alt="Mensch im Sprint" class="w3-left w3-circle">
-						<p style="text-align: left;">
-							Volkstanzen ist Lebensfreude für Jung und Alt!   
-						</p>
-					</div>
-					<hr>
-					<p class="mtv-justify">
-						Auf der (Volks-)Tanzfläche ist die Familie zuhause. Auch für klassische Nichttänzer ist das die schönste Form der Brauchtumspflege.
-					</p>
-				</div>
-			</div>
-			<br>
-			<br>-->
-
-			<div class="w3-cell-row mtv-padding-large mtv-image-list" style="min-height: 100px; overflow: auto;">
-				<div class="w3-cell mtv-image-list-cell">
-					<img class="mtv-image-list-img" src="GIFs/turnen.gif" onclick="nextTopic(1, this);">
-				</div>
-				<div class="w3-cell mtv-image-list-cell">
-					<img class="mtv-image-list-img" src="GIFs/gymnastik.gif" onclick="nextTopic(2, this);">
-				</div>
-				<div class="w3-cell mtv-image-list-cell">
-					<img class="mtv-image-list-img" src="GIFs/leichtathletik.gif" onclick="nextTopic(3, this);">
-				</div>
-				<div class="w3-cell mtv-image-list-cell">
-					<img class="mtv-image-list-img" src="GIFs/mutterkindturnen.gif" onclick="nextTopic(4, this);">
-				</div>
-				<div class="w3-cell mtv-image-list-cell">
-					<img class="mtv-image-list-img" src="GIFs/musizieren.gif" onclick="nextTopic(5, this);">
-				</div>
-				<div class="w3-cell mtv-image-list-cell">
-					<img class="mtv-image-list-img" src="GIFs/volkstanzen.gif" onclick="nextTopic(6, this);">
-				</div>
-				<div class="w3-cell mtv-image-list-cell">
-					<img class="mtv-image-list-img" src="GIFs/allgemein.gif" onclick="nextTopic(7, this);">
-				</div>
-				<div class="w3-cell mtv-image-list-cell">
-					<img class="mtv-image-list-img" src="GIFs/turnerlager.gif" onclick="nextTopic(8, this);">
-				</div>
-				<div class="w3-cell mtv-image-list-cell">
-					<img class="mtv-image-list-img" src="GIFs/yoga.gif" onclick="nextTopic(9, this);">
-				</div>
-			</div>
-			<div class="w3-container mtv-padding-large">
-				<div class="w3-container" id="topic1" style="display: none;">
-					<h1>Ger&auml;teturnen</h1>
-					<hr>
-					<p class="mtv-kursiv">
+			<div class="w3-container mtv-padding-large mtv-image-list-topics">
+				<div class="w3-container active" id="topic1" style="display: block;">
+					<h1 class="mtv-animate-top">Ger&auml;teturnen</h1>
+					<hr class="mtv-animate-top">
+					<p class="mtv-kursiv mtv-animate-fadein">
 						Gefragt sind Beweglichkeit, Kraft und Können.
 					</p>
-					<hr>
-					<p class="mtv-padding-extra mtv-justify">
-						Hallo leude
+					<hr class="mtv-animate-fadein">
+					<p class="mtv-padding-large mtv-justify mtv-animate-bottom">
+						Wir legen Wert auf gesundes Training. Im Gegensatz zu reinem Bodybuilding wird hier nicht nur Kraft, 
+						sondern auch Beweglichkeit und Körperbeherrschung trainiert. Das verhindert Haltungsschäden, vor allem bei Kindern. 
 					</p>
 					<br><br>
 				</div>
 				<div class="w3-container" id="topic2" style="display: none;">
-					<h1>Gymnastik</h1>
-					<hr>
+					<h1 class="mtv-animate-top">Gymnastik</h1>
+					<hr class="mtv-animate-top">
+					<p class="mtv-kursiv mtv-animate-fadein">
+						Schweißtreibend, rhythmusbetont, figurformend. Was das bringt? Fitness!! 
+					</p>
+					<hr class="mtv-animate-fadein">
+					<p class="mtv-padding-large mtv-justify mtv-animate-bottom">
+						Nicht nur für Damen ist unser Angebot an Gymnastik-Programmen. Wer seine Kondition verbessern oder ein paar Kilo abspecken will, 
+						oder wer einfach nur Spaß an der Bewegung zu Musik hat, ist hier richtig.  
+					</p>
 					<br><br>
 				</div>
 				<div class="w3-container" id="topic3" style="display: none;">
-					<h1>Leichtathletik</h1>
-					<hr>
+					<h1 class="mtv-animate-top">Leichtathletik</h1>
+					<hr class="mtv-animate-top">
+					<p class="mtv-kursiv mtv-animate-fadein">
+						Hier werden Schnelligkeit, Ausdauer, Kraft und die richtige Umsetzung trainiert. 
+					</p>
+					<hr class="mtv-animate-fadein">
+					<p class="mtv-padding-large mtv-justify mtv-animate-bottom">
+						Schneller, höher, weiter! Doch auch hier steht uns körpergerechtes Training vor Spitzenleistungen. 
+						Die Bewegung im Freien ist gesund und natürlich vor allem im Sommer sehr beliebt. 
+					</p>
 					<br><br>
 				</div>
 				<div class="w3-container" id="topic4" style="display: none;">
-					<h1>My Page4</h1>
-					<hr>
+					<h1 class="mtv-animate-top">Mutter-Vater-Kind-Turnen</h1>
+					<hr class="mtv-animate-top">
+					<p class="mtv-kursiv mtv-animate-fadein">
+						Schon die Kleinsten bewegen sich gerne mit ihren Eltern.
+					</p>
+					<hr class="mtv-animate-fadein">
+					<p class="mtv-padding-large mtv-justify mtv-animate-bottom">
+						Spielerisch erlernen die Kinder gemeinsam mit ihren Eltern die Grundbegriffe für das Bewegen in einem Turnsaal kennen. 
+						Es wird nicht nur die Beweglichkeit und Kraft sondern auch die Koordination sowie das Vertrauen in die Eltern geschult.
+					</p>
 					<br><br>
 				</div>
 				<div class="w3-container" id="topic5" style="display: none;">
-					<h1>My Page5</h1>
-					<hr>
+					<h1 class="mtv-animate-top">Musizieren</h1>
+					<hr class="mtv-animate-top">
+					<p class="mtv-kursiv mtv-animate-fadein">
+						In unserem Spielmannszug wird auch der Geist trainiert.
+					</p>
+					<hr class="mtv-animate-fadein">
+					<p class="mtv-padding-large mtv-justify mtv-animate-bottom">
+						Ein buntes Repertoire aus verschiedenen Musikrichtungen schult Ausdauer, Konzentration und sorgt für gemeinsame Erfolgserlebnisse.
+					</p>
 					<br><br>
 				</div>
 				<div class="w3-container" id="topic6" style="display: none;">
-					<h1>My Page6</h1>
-					<hr>
+					<h1 class="mtv-animate-top">Volkstanzen</h1>
+					<hr class="mtv-animate-top">
+					<p class="mtv-kursiv mtv-animate-fadein">
+						Volkstanzen ist Lebensfreude für Jung und Alt!
+					</p>
+					<hr class="mtv-animate-fadein">
+					<p class="mtv-padding-large mtv-justify mtv-animate-bottom">
+						Auf der (Volks-)Tanzfläche ist die Familie zuhause. Auch für klassische Nichttänzer ist das die schönste Form der Brauchtumspflege.
+					</p>
 					<br><br>
 				</div>
 				<div class="w3-container" id="topic7" style="display: none;">
-					<h1>My Page7</h1>
-					<hr>
+					<h1 class="mtv-animate-top">Veranstaltungen</h1>
+					<hr class="mtv-animate-top">
+					<p class="mtv-kursiv mtv-animate-fadein">
+						Feiern, Wettkämpfe und Schauturnen erhöhen das Gemeinsamkeitsgefühl und machen jedes Jahr zu etwas Besonderem.
+					</p>
+					<hr class="mtv-animate-fadein">
+					<p class="mtv-padding-large mtv-justify mtv-animate-bottom">
+						Man soll die Feste feiern, wie sie fallen: Sonnenwende, Julfeier... Auf dem Programm stehen außerdem jede Menge Wettkämpfe, 
+						der traditionelle Waldlauf, das Schauturnen, sowie das händische Maibaum aufstellen.
+					</p>
 					<br><br>
 				</div>
 				<div class="w3-container" id="topic8" style="display: none;">
-					<h1>My Page8</h1>
-					<hr>
+					<h1 class="mtv-animate-top">Sommerlager</h1>
+					<hr class="mtv-animate-top">
+					<p class="mtv-kursiv mtv-animate-fadein">
+						Unsere Vereinslager sind jedes Jahr eine willkommene Abwechslung im Sommer.
+					</p>
+					<hr class="mtv-animate-fadein">
+					<p class="mtv-padding-large mtv-justify mtv-animate-bottom">
+						Eine Lagerwoche bedeutet Spiel, Spaß, Bewegung und Gemeinschaft in herrlicher Umgebung. Abwechslungsrech und spannend gestaltet sich das Programm. 
+						Angefangen bei Geländespielen bis hin zu Basteln, Musik und selbstverständlich Sport. Je nach Altersgruppe von 8-12 bzw. ab 13-19 oder 
+						älter gibt es das maßgeschneiderte Erlebnis. 
+
+					</p>
 					<br><br>
 				</div>
 				<div class="w3-container" id="topic9" style="display: none;">
-					<h1>My Page9</h1>
-					<hr>
+					<h1 class="mtv-animate-top">Yoga</h1>
+					<hr class="mtv-animate-top">
+					<p class="mtv-kursiv mtv-animate-fadein">
+						Auch eine Yoga-Stunde gibt es in unserem vielfältigen Angebot. 
+					</p>
+					<hr class="mtv-animate-fadein">
+					<p class="mtv-padding-large mtv-justify mtv-animate-bottom">
+						Yoga dient dazu, Körper und Geist in Einklang zu bringen, um den Stress des Alltags abzubauen, sowie Energie aufzubauen. 
+						Dabei werden Muskelspannung und -entspannung, Flexibilität, Konzentration, sowie Körperwahrnehmung geschult. 
+					</p>
 					<br><br>
 				</div>
 			</div>

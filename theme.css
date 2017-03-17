@@ -44,11 +44,21 @@
 .w3-sidebar {position:relative !important}
 .mtv-table img {padding-top: 0px !important; height: 70px; margin-right: 10px;}
 
+@media screen and (min-width: 601px) {
+	.mtv-image-list {min-height: 100px !important;}
+}
 .mtv-image-list img {border-radius: 100% !important; cursor: pointer;}
 .mtv-image-list .active {border: 3px solid #033881}
 
+.mtv-image-list-container-425 {min-height: 425px !important}
+.mtv-image-list-topics .active {display: block}
+.mtv-image-list-topics .w3-container {display: none}
+
+
 @media screen and (max-width: 600px) {
 	.mtv-image-list-img {height: 30px !important; margin: 0px !important; padding: 0px !important;}
+	.mtv-image-list-cell{height: 40px !important; padding-bottom: 0px !important; margin: 0px !important}
+	.mtv-image-list {min-height: 0px !important;}
 }
 
 .mtv-card-300 {height: 300px !important; margin: 10px 0px 10px 0px !important; overflow: hidden;}
@@ -66,11 +76,7 @@
 @media screen and (min-width: 601px) {
 	.mtv-list-start{border-top-left-radius: 10px}
 	.mtv-list-end{border-top-right-radius: 10px}
-
-.mtv-table img {padding-top: 0px !important; height: 70px; margin-right: 10px;}
-
-.mtv-image-list img {border-radius: 100% !important; cursor: pointer;}
-.mtv-image-list .active {border: 3px solid #033881}
+}
 
 @media screen and (max-width: 600px) {
 	.mtv-image-list-img {height: 30px !important; margin: 0px !important; padding: 0px !important;}
@@ -81,6 +87,8 @@
 	.mtv-list-end{border-radius: 0px 0px 0px 0px}
 }
 
+.mtv-table img {padding-top: 0px !important; height: 70px; margin-right: 10px;}
+
 .mtv-card-300 {height: 300px !important; margin: 10px 0px 10px 0px !important; overflow: hidden;}
 
 .mtv-border-bottom{border-radius: 0px 0px 10px 10px}
@@ -90,3 +98,15 @@
 
 .mtv-justify {text-align: justify !important}
 .mtv-kursiv {font-style: italic !important}
+
+.mtv-animate-fadein{position:relative;-webkit-animation:mtv_fadein 0.6s;animation:mtv_fadein 0.6s}
+@-webkit-keyframes mtv_fadein{from{opacity:0} to{opacity:1}}
+@keyframes mtv_fadein{from{opacity:0} to{opacity:1}}
+
+.mtv-animate-top{position:relative;-webkit-animation:mtv_animatetop 0.4s;animation:mtv_animatetop 0.4s}
+@-webkit-keyframes mtv_animatetop{from{top:-30px;opacity:0} to{top:0;opacity:1}}
+@keyframes mtv_animatetop{from{top:-30px;opacity:0} to{top:0;opacity:1}}
+
+.mtv-animate-bottom{position:relative;-webkit-animation:mtv_animatebottom 0.4s;animation:mtv_animatebottom 0.4s}
+@-webkit-keyframes mtv_animatebottom{from{bottom:-50px;opacity:0} to{top:0;opacity:1}}
+@keyframes mtv_animatebottom{from{bottom:-50px;opacity:0} to{bottom:0;opacity:1}}
