@@ -62,10 +62,13 @@
 					return;
 				}*/
 			
-				for (i = 1; i <= nrTopics; i++)
+				for (i = 1; i <= nrTopics; i++) {
 					document.getElementById("topic"+i).style.display = "none";
+					document.getElementById("topic"+i).className = document.getElementById("topic"+i).className.replace(" active", "");
+				}
 					
 				document.getElementById("topic"+id).style.display = "block";
+				document.getElementById("topic"+id).className += " active";
 				imgs = document.getElementsByClassName("mtv-image-list-img");
 				for (i = 0; i < imgs.length; i++)
 					imgs[i].className = imgs[i].className.replace(" active", "");
@@ -95,16 +98,16 @@
 			
 			
 			<div id="navbarCollapsed" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large">
-				<div class="w3-bar-item w3-cell-row w3-theme-d4" style="padding: 0px !important; margin: 0px !important;">
+				<div class="w3-bar-item w3-cell-row" style="padding: 0px !important">
 					<a href="#" class="w3-third w3-button w3-theme">Willkommen</a>
 					<a href="#" class="w3-third w3-button w3-theme-d4">Infos</a>
 					<a href="#" class="w3-third w3-button w3-theme-d4">Termine</a>
 				</div>
-				<div class="w3-bar-item w3-cell-row w3-theme-d4" style="padding: 0px !important; margin: 0px !important;">
+				<div class="w3-bar-item w3-cell-row" style="padding: 0px !important">
 					<a href="#" class="w3-half w3-button w3-theme-d4">Fotogalerie</a>
 					<a href="#" class="w3-half w3-button w3-theme-d4">Vereinsnachrichten</a>
 				</div>
-				<div class="w3-bar-item w3-cell-row w3-theme-d4" style="padding: 0px !important;">
+				<div class="w3-bar-item w3-cell-row" style="padding: 0px !important;">
 					<a href="#" class="w3-third w3-button w3-theme-d4">Links</a>
 					<a href="#" class="w3-third w3-button w3-theme-d4">Kontakt</a>
 					<a href="#" class="w3-third w3-button w3-theme-d4">Login</a>
@@ -178,7 +181,7 @@
 				</div>
 			</div>
 			<div class="w3-container mtv-padding-large mtv-image-list-topics">
-				<div class="w3-container active" id="topic1" style="display: block;">
+				<div class="w3-container active" id="topic1">
 					<h1 class="mtv-animate-top">Ger&auml;teturnen</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -191,7 +194,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container" id="topic2" style="display: none;">
+				<div class="w3-container" id="topic2">
 					<h1 class="mtv-animate-top">Gymnastik</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -267,7 +270,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container" id="topic8" style="display: none;">
+				<div class="w3-container mtv-animate-top" id="topic8" style="display: none;">
 					<h1 class="mtv-animate-top">Sommerlager</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">

@@ -60,7 +60,7 @@
 .mtv-image-list .active {border: 3px solid #033881}
 
 .mtv-image-list-container-425 {min-height: 425px !important}
-.mtv-image-list-topics .active {display: block}
+.mtv-image-list-topics .active {display: block !important}
 .mtv-image-list-topics .w3-container {display: none}
 
 @media screen and (max-width: 1225) {
