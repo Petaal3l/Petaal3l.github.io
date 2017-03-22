@@ -12,52 +12,12 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="theme.css">
+		
+		<script type="text/javascript" src="script.js"></script>
 
 		
 		<script>
-			window.onresize = function() {
-				mtv_extra_padding();
-			}
-			
-			window.onload = function() {
-				mtv_extra_padding();
-			}
-			
-			function mtv_extra_padding() {
-				elems = document.getElementsByClassName("mtv-extra-padding");
-				if (window.innerWidth > 995) {
-					for (i = 0; i < elems.length; i++) {
-						elems[i].style.paddingLeft += 50;
-						elems[i].style.paddingRight += 50;
-					}
-				} else {
-					for (i = 0; i < elems.length; i++) {
-						elems[i].style.paddingLeft -= 50;
-						elems[i].style.paddingRight -= 50;
-					}
-				}
-			}
-			
-			var nrTopics = 9;
-			function nextTopic(id, nextActive) {
-				/*if (document.getElementById("topic"+id).style.display == "block") {
-					nextActive.style.border = "";
-					document.getElementById("topic"+id).style.display = "none";
-					return;
-				}*/
-			
-				for (i = 1; i <= nrTopics; i++) {
-					document.getElementById("topic"+i).style.display = "none";
-					document.getElementById("topic"+i).className = document.getElementById("topic"+i).className.replace(" active", "");
-				}
-					
-				document.getElementById("topic"+id).style.display = "block";
-				document.getElementById("topic"+id).className += " active";
-				imgs = document.getElementsByClassName("mtv-image-list-img");
-				for (i = 0; i < imgs.length; i++)
-					imgs[i].className = imgs[i].className.replace(" active", "");
-				nextActive.className += " active";
-			}
+			startUp();
 		</script>
 	</head>
 
@@ -76,12 +36,12 @@
 				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Vereinsnachrichten</a>
 				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium">Links</a>
 				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium">Kontakt</a>
-				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium"><i class="fa fa-sign-in"></i></a>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium" onclick="toggleLogin()"><i class="fa fa-sign-in"></i></a>
 				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="myFunction()">&#9776;</a>
 			</div>
 			
 			
-			<div id="navbarCollapsed" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large">
+			<div id="navbarCollapsed" class="w3-bar-block w3-theme-d4 w3-hide w3-card-12 w3-hide-large">
 				<div class="w3-bar-item w3-cell-row" style="padding: 0px !important">
 					<a href="#" class="w3-third w3-button w3-theme">Willkommen</a>
 					<a href="#" class="w3-third w3-button w3-theme-d4">Infos</a>
@@ -94,11 +54,20 @@
 				<div class="w3-bar-item w3-cell-row" style="padding: 0px !important;">
 					<a href="#" class="w3-third w3-button w3-theme-d4">Links</a>
 					<a href="#" class="w3-third w3-button w3-theme-d4">Kontakt</a>
-					<a href="#" class="w3-third w3-button w3-theme-d4">Login</a>
+					<a href="javascript:void(0)" class="w3-third w3-button w3-theme-d4" onclick="myFunction(); toggleLogin();">Login</a>
 				</div>
 			</div>
 		</div>
-		<div class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 50px;">
+		
+		<div id="loginDiv" class="w3-white w3-center w3-theme-d4 mtv-padding-large">
+			<label>Username</label>
+			<input class="w3-input mtv-text-center" type="text">
+			<label>Password</label>
+			<input class="w3-input mtv-text-center" type="password">
+			<input class="w3-button w3-theme-d4" style="width: 100%;" type="button" value="Login">
+		</div>
+		
+		<div id="header" class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 50px;">
 			<p><h1>Willkommen</h1></p>
 		</div>
 		
@@ -165,7 +134,7 @@
 				</div>
 			</div>
 			<div class="w3-container mtv-padding-large mtv-image-list-topics">
-				<div class="w3-container active" id="topic1">
+				<div class="w3-container active mtv-image-list-topic" id="topic1">
 					<h1 class="mtv-animate-top">Ger&auml;teturnen</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -178,7 +147,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container" id="topic2">
+				<div class="w3-container mtv-image-list-topic" id="topic2">
 					<h1 class="mtv-animate-top">Gymnastik</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -191,7 +160,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container" id="topic3" style="display: none;">
+				<div class="w3-container mtv-image-list-topic" id="topic3" style="display: none;">
 					<h1 class="mtv-animate-top">Leichtathletik</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -204,7 +173,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container" id="topic4" style="display: none;">
+				<div class="w3-container mtv-image-list-topic" id="topic4" style="display: none;">
 					<h1 class="mtv-animate-top">Mutter-Vater-Kind-Turnen</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -217,7 +186,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container" id="topic5" style="display: none;">
+				<div class="w3-container mtv-image-list-topic" id="topic5" style="display: none;">
 					<h1 class="mtv-animate-top">Musizieren</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -229,7 +198,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container" id="topic6" style="display: none;">
+				<div class="w3-container mtv-image-list-topic" id="topic6" style="display: none;">
 					<h1 class="mtv-animate-top">Volkstanzen</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -241,7 +210,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container" id="topic7" style="display: none;">
+				<div class="w3-container mtv-image-list-topic" id="topic7" style="display: none;">
 					<h1 class="mtv-animate-top">Veranstaltungen</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -254,7 +223,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container mtv-animate-top" id="topic8" style="display: none;">
+				<div class="w3-container mtv-animate-top mtv-image-list-topic" id="topic8" style="display: none;">
 					<h1 class="mtv-animate-top">Sommerlager</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -269,7 +238,7 @@
 					</p>
 					<br><br>
 				</div>
-				<div class="w3-container" id="topic9" style="display: none;">
+				<div class="w3-container mtv-image-list-topic" id="topic9" style="display: none;">
 					<h1 class="mtv-animate-top">Yoga</h1>
 					<hr class="mtv-animate-top">
 					<p class="mtv-kursiv mtv-animate-fadein">
@@ -293,15 +262,5 @@
 			Jahngasse 17, &nbsp;A-3400 Klosterneuburg</a><br>
 			Turnstunden: +43 2243 22904 &nbsp; Verwaltung: +43 2243 22904
 		</div>
-		
-		<script>
-		function myFunction() {
-			var x = document.getElementById("navbarCollapsed");
-			if (x.className.indexOf("w3-show") == -1)
-				x.className += " w3-show";
-			else
-				x.className = x.className.replace(" w3-show", "");
-		}
-		</script>
 	</body>
 </html>

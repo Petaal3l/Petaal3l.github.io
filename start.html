@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MTV Klosterneuburg</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" href="logo.png">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="theme.css">
+		
+		<script src="script.js"></script>
+		<script src="Plugins/jquery.js"></script>
+
+		
+		<script>
+			startUp();
+			
+		</script>
+	</head>
+
+	<body style="min-height: 1000px;">
+		
+		<div class="w3-top">
+			<div class="w3-bar w3-theme-d4 w3-card-4 mtv-padding-large" id="navbar">
+				<div class="w3-bar-item w3-button w3-cell">
+					<img href="#" class="w3-bar-item" src="logo.png" style="height: 25px; padding: 0 0 0 0;" />
+					&nbsp;&nbsp;MTV Klosterneuburg
+				</div>
+				<a href="#" class="w3-bar-item w3-button w3-theme w3-hide-small w3-hide-medium">Willkommen</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Infos</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Termine</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Fotogalerie</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Vereinsnachrichten</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium">Links</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium">Kontakt</a>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium" onclick="toggleLogin()"><i class="fa fa-sign-in"></i></a>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="myFunction()">&#9776;</a>
+			</div>
+			
+			
+			<div id="navbarCollapsed" class="w3-bar-block w3-theme-d4 w3-hide w3-hide-large">
+				<div class="w3-bar-item w3-cell-row" style="padding: 0px !important">
+					<a href="#" class="w3-third w3-button w3-theme">Willkommen</a>
+					<a href="#" class="w3-third w3-button w3-theme-d4">Infos</a>
+					<a href="#" class="w3-third w3-button w3-theme-d4">Termine</a>
+				</div>
+				<div class="w3-bar-item w3-cell-row" style="padding: 0px !important">
+					<a href="#" class="w3-half w3-button w3-theme-d4">Fotogalerie</a>
+					<a href="#" class="w3-half w3-button w3-theme-d4">Vereinsnachrichten</a>
+				</div>
+				<div class="w3-bar-item w3-cell-row" style="padding: 0px !important;">
+					<a href="#" class="w3-third w3-button w3-theme-d4">Links</a>
+					<a href="#" class="w3-third w3-button w3-theme-d4">Kontakt</a>
+					<a href="javascript:void(0)" class="w3-third w3-button w3-theme-d4" onclick="myFunction(); toggleLogin();">Login</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="loginDiv" class="w3-white w3-center mtv-animate-top-50 mtv-padding-large" style="margin-top: 50px; display: none;">
+			<label>Username</label>
+			<input class="w3-input mtv-text-center" type="text">
+			<label>Password</label>
+			<input class="w3-input mtv-text-center" type="password">
+			<input class="w3-button" style="width: 100%;" type="button" value="Login">
+		</div>
+		
+		
+		<div id="header" class="w3-container w3-theme-d4 w3-teal w3-center" style="margin-top: 50px;">
+			<p><h1>MTV Klosterneuburg</h1></p>
+		</div>
+		
+		<div class="w3-card-12 w3-green mtv-card" style="width: 200px; height: 100%;">
+			<img src="D:/Verein/Schauturnen 2017/Fotos/DSC_9378.JPG">
+		</div>
+		
+		<div class="mtv-padding-large mtv-footer w3-button-theme w3-center">
+			Copyright © 1997 - 2017 &nbsp; <a href="http://www.mtv-klbg.at">mtv-klbg.at</a> &nbsp; Alle Rechte vorbehalten<br>
+			<a href="mailto:kanzlei@mtv-klbg.at">kanzlei@mtv-klbg.at</a> &nbsp; 
+			<a href="https://www.google.com/maps/place/Jahngasse+17,+3400+Klosterneuburg,+%C3%96sterreich/@48.3007221,16.3223688,80a,20y,40.78h,46.61t/data=!3m1!1e3!4m5!3m4!1s0x476d0f1f187bf10f:0x6ac834808ec106ea!8m2!3d48.3011746!4d16.3233843">
+			Jahngasse 17, &nbsp;A-3400 Klosterneuburg</a><br>
+			Turnstunden: +43 2243 22904 &nbsp; Verwaltung: +43 2243 22904
+		</div>
+	</body>
+</html>

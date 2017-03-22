@@ -97,10 +97,14 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-	.mtv-image-list-container{height: 380px !important; overflow-y: auto;}
 	.mtv-image-list-img {height: 30px !important; margin: 0px !important; padding: 0px !important;}
 	.mtv-image-list-cell{height: 40px !important; padding-bottom: 0px !important; margin: 0px !important}
 	.mtv-image-list {min-height: 0px !important;}
+	
+	.mtv-image-list-topics {-webkit-animation:mtv_maxheight 0.5s;animation:mtv_maxheight 0.5s; overflow: hidden;}
+	.mtv-image-list-topic.active {-webkit-animation:mtv_maxheight 0.5s;animation:mtv_maxheight 0.5s; overflow: hidden;}
+	@-webkit-keyframes mtv_maxheight{from{max-height:0px} to{max-height:500px}}
+	@keyframes mtv_maxheight{from{max-height:0px} to{max-height:500px}}
 }
 
 .mtv-card-300 {height: 300px !important; margin: 10px 0px 10px 0px !important; overflow: hidden;}
@@ -141,13 +145,18 @@ p {
 
 .mtv-justify {text-align: justify !important}
 .mtv-kursiv {font-style: italic !important}
+.mtv-text-center {text-align: center !important}
 
 .mtv-footer {margin-top: 100px !important}
 
+.mtv-animate-fadein-slow{position:relative;-webkit-animation:mtv_fadein 1s;animation:mtv_fadein 1s}
 .mtv-animate-fadein{position:relative;-webkit-animation:mtv_fadein 0.6s;animation:mtv_fadein 0.6s}
 @-webkit-keyframes mtv_fadein{from{opacity:0} to{opacity:1}}
 @keyframes mtv_fadein{from{opacity:0} to{opacity:1}}
 
+.mtv-animate-top-50{position:relative;-webkit-animation:mtv_animatetop_50 0.4s;animation:mtv_animatetop_50 0.4s}
+@-webkit-keyframes mtv_animatetop_50{from{top:-50px;opacity:0} to{top:0;opacity:1}}
+@keyframes mtv_animatetop_50{from{top:-50px;opacity:0} to{top:0;opacity:1}}
 .mtv-animate-top{position:relative;-webkit-animation:mtv_animatetop 0.4s;animation:mtv_animatetop 0.4s}
 @-webkit-keyframes mtv_animatetop{from{top:-30px;opacity:0} to{top:0;opacity:1}}
 @keyframes mtv_animatetop{from{top:-30px;opacity:0} to{top:0;opacity:1}}
@@ -155,3 +164,28 @@ p {
 .mtv-animate-bottom{position:relative;-webkit-animation:mtv_animatebottom 0.4s;animation:mtv_animatebottom 0.4s}
 @-webkit-keyframes mtv_animatebottom{from{bottom:-50px;opacity:0} to{top:0;opacity:1}}
 @keyframes mtv_animatebottom{from{bottom:-50px;opacity:0} to{bottom:0;opacity:1}}
+
+.mtv-animate-maxheight{-webkit-animation:mtv_animatemaxheight 3s;animation:mtv_animatemaxheight 3s; overflow: hidden; transition: visibility 0s, opacity 3s linear, max-height 3s linear;}
+@-webkit-keyframes mtv_animatemaxheight{from{max-height:0px;opacity:0} to{max-height:200px;opacity:1}}
+@keyframes mtv_animatemaxheight{from{max-height:0px;opacity:0} to{max-height:200px;opacity:1}}
+
+#header {transition: margin-top 0.5s linear}
+
+#loginDiv {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	height: 180px;
+	max-height: 0px;
+	overflow: hidden; 
+	transition: opacity 0.5s, max-height 0.5s linear;
+}
+
+.w3-bar-item .w3-button {border: 1px solid white; border-radius: 100%;}
+
+/*********************
+	MTV-Cards
+*********************/
+.mtv-card {border-radius: 10px !important; margin: 10px !important; border: 3px solid black !important; background-color: 021c41 !important; color: #fff !important}
+.mtv-card * {width: 100%; height: calc(100% - 6px); border-radius: 7px; margin: 0px;}
