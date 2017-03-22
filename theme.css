@@ -5,6 +5,19 @@ p {
 	font-size: 15px;
 }
 
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.no-cursor {
+	cursor: default;
+}
+
 @media screen and (max-width: 600px) {
 	.mtv-footer {font-size: 12px}
 }
@@ -147,7 +160,7 @@ p {
 .mtv-kursiv {font-style: italic !important}
 .mtv-text-center {text-align: center !important}
 
-.mtv-footer {margin-top: 100px !important}
+.mtv-footer {margin-top: 100px !important; width: 100% !important;}
 
 .mtv-animate-fadein-slow{position:relative;-webkit-animation:mtv_fadein 1s;animation:mtv_fadein 1s}
 .mtv-animate-fadein{position:relative;-webkit-animation:mtv_fadein 0.6s;animation:mtv_fadein 0.6s}
@@ -182,10 +195,31 @@ p {
 	transition: opacity 0.5s, max-height 0.5s linear;
 }
 
-.w3-bar-item .w3-button {border: 1px solid white; border-radius: 100%;}
+#loginDiv input {
+	color: #000;
+}
+
+.w3-bar-item .w3-button {border: 1px solid white;}
 
 /*********************
 	MTV-Cards
 *********************/
-.mtv-card {border-radius: 10px !important; margin: 10px !important; border: 3px solid black !important; background-color: 021c41 !important; color: #fff !important}
-.mtv-card * {width: 100%; height: calc(100% - 6px); border-radius: 7px; margin: 0px;}
+.mtv-card {border-radius: 10px !important; margin: 10px 5px 0px 5px !important; border: 3px solid black !important; 
+			background-color: #021c41 !important; color: #fff !important; overflow: hidden;}
+.mtv-card img {width: 100%; height: calc(100% - 6px); border-radius: 7px; margin: 0px; opacity: 0.5}
+.mtv-card:hover img {opacity: 0.3}
+.mtv-card .w3-display-middle {max-height: calc(100% - 80px); width: 80%;}
+.mtv-card .fa {margin: 0px 10px 10px 0px !important}
+
+@media screen and (min-width: 650px) {
+	.w3-row .mtv-card {width: calc(50% - 16px) !important; text-align: center;}
+	.mtv-card h3 {font-size: 40px; width: 100%;}
+	.mtv-card p {font-size: 20px;}
+}
+
+@media screen and (max-width: 650px) {
+	.mtv-card {width: calc(100% - 6px) !important; text-align: center;}
+	.mtv-card h3 {font-size: 20px; width: 100%;}
+	.mtv-card p {font-size: 10px}
+	.mtv-card .w3-display-middle {width: 90%;}
+}

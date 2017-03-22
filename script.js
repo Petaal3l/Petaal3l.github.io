@@ -31,6 +31,8 @@ function toggleLogin() {
 		x.style.maxHeight = "180px";
 		header.style.marginTop = "230px";
 	}
+	
+	$("body").animate({scrollTop:0}, "slow");
 }
 
 window.onresize = function() {
